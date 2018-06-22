@@ -7,7 +7,7 @@ Currently, ORB_SLAM2 offers build file for ROS, but it doesn't broadcast any mes
 
 - [X] Mono Camera Slam
 - [ ] Stereo Camera Slam
-- [ ] RGB-D Camera Slam
+- [X] RGB-D Camera Slam (directly from ORB-SLAM2 library, peding to test)
 
 ## Installation
 

@@ -33,3 +33,6 @@
 
 # curtis editor
 .remote-sync.json
+
+# kde editor
+.kde*

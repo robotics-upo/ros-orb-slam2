@@ -67,9 +67,21 @@ include_directories(
 )
 
 add_executable(${PROJECT_NAME}_mono ${PROJECT_SOURCE_DIR}/src/orb_slam2_mono.cpp)
+add_executable(${PROJECT_NAME}_rgbd ${PROJECT_SOURCE_DIR}/src/ros_rgbd.cpp)
 
 # Specify libraries to link a library or executable target against
 target_link_libraries(${PROJECT_NAME}_mono
+  ${catkin_LIBRARIES}
+  ${ORBSLAM2_DIR}/lib/libORB_SLAM2.so
+  ${ORBSLAM2_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
+  ${ORBSLAM2_DIR}/Thirdparty/g2o/lib/libg2o.so
+
+  ${OpenCV_LIBS}
+  ${EIGEN3_LIBS}
+  ${Pangolin_LIBRARIES}
+)
+
+target_link_libraries(${PROJECT_NAME}_rgbd
   ${catkin_LIBRARIES}
   ${ORBSLAM2_DIR}/lib/libORB_SLAM2.so
   ${ORBSLAM2_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
